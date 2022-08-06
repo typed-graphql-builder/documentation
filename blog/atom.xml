@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://typed-graphql-builder.spion.dev /blog</id>
-    <title>typed-graphql-builder documentation Blog</title>
+    <title>typed-graphql-builder Blog</title>
     <updated>2021-08-26T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://typed-graphql-builder.spion.dev /blog"/>
-    <subtitle>typed-graphql-builder documentation Blog</subtitle>
+    <subtitle>typed-graphql-builder Blog</subtitle>
     <icon>https://typed-graphql-builder.spion.dev /img/favicon.ico</icon>
     <entry>
         <title type="html"><![CDATA[Welcome]]></title>
