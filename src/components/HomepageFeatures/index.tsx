@@ -2,50 +2,60 @@ import React from 'react';
 import clsx from 'clsx';
 import styles from './styles.module.css';
 
+// import noMoreWatch = require('@site/static/img/no-more-watch.png')
+
 type FeatureItem = {
   title: string;
-  Svg: React.ComponentType<React.ComponentProps<'svg'>>;
+  extraStyle?: any;
+  Svg?: React.ComponentType<React.ComponentProps<'svg'>>;
+  Png?: string;
   description: JSX.Element;
 };
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'Edit queries without recompiling',
+    // Svg: require('@site/static/img/no-more-watch.svg').default,
+    Png: require('@site/static/img/no-more-watch.png').default,
+    extraStyle: {
+      marginTop: '-60px',
+      marginBottom: '-60px'
+    },
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Generate types from your schema once, then edit queries in pure TypeScript. No need to rebuild the types every time you change a query string.
+
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: 'Integrates with existing libraries',
+    Svg: require('@site/static/img/all-clients.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Its just a query builder. It produces a standard <code>TypedDocumentNode</code> which you can use
+        with any client, such as <a href="https://www.apollographql.com/docs/react/">Apollo</a>, <a href="https://formidable.com/open-source/urql/docs/api/urql/">urql</a> or <a href="https://relay.dev/">Relay</a>
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: 'Advanced type inference',
+    Svg: require('@site/static/img/type-inference.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        <code>typed-graphql-builder</code> can infer input types, output types and variable types, no matter what you throw at it! See the <a href="#">complex example</a> for a taste of what it can do.
       </>
     ),
   },
 ];
 
-function Feature({title, Svg, description}: FeatureItem) {
+function Feature({title, Svg, Png, description, extraStyle}: FeatureItem) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
+
+        {Svg ? <Svg className={styles.featureSvg} style={extraStyle || {}} role="img" />
+         : <img src={Png} style={extraStyle} />}
       </div>
       <div className="text--center padding-horiz--md">
         <h3>{title}</h3>

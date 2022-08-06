@@ -120,7 +120,7 @@ const config = {
             ],
           },
         ],
-        copyright: ``,
+        copyright: `(C) Gjorgji Kjosev and others`,
       },
       prism: {
         theme: lightCodeTheme,
