@@ -7,6 +7,9 @@ import HomepageFeatures from '@site/src/components/HomepageFeatures';
 
 import styles from './index.module.css';
 
+let inputTypescript = require('@site/static/img/input-typescript.png').default
+let outputGraphql = require('@site/static/img/output-graphql.png').default
+
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
   return (
@@ -14,6 +17,8 @@ function HomepageHeader() {
       <div className="container">
         <h1 className="hero__title">{siteConfig.title}</h1>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
+        <img src={inputTypescript} style={{maxHeight: 350}} />
+        <img src={outputGraphql} style={{maxHeight: 350}} />
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"

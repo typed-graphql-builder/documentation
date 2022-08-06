@@ -33,7 +33,7 @@ const FeatureList: FeatureItem[] = [
     Svg: require('@site/static/img/all-clients.svg').default,
     description: (
       <>
-        Its just a query builder. It produces a standard <code>TypedDocumentNode</code> which you can use
+        Its just a query builder - no network library dependencies. It produces a standard <code>TypedDocumentNode</code> which you can use
         with any client, such as <a href="https://www.apollographql.com/docs/react/">Apollo</a>, <a href="https://formidable.com/open-source/urql/docs/api/urql/">urql</a> or <a href="https://relay.dev/">Relay</a>
       </>
     ),
