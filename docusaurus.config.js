@@ -6,7 +6,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula')
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'typed-graphql-builder documentation',
+  title: 'typed-graphql-builder',
   tagline: 'A fully type-safe TypeScript GraphQL query builder',
   url: 'https://typed-graphql-builder.spion.dev ',
   baseUrl: '/',
