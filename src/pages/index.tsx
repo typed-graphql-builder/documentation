@@ -14,26 +14,26 @@ function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext()
   return (
     <header className={clsx("hero hero--primary", styles.heroBanner)}>
-      <div className="container">
-        <div className={styles.container}>
-          <div className={styles.heroLeft}>
-            <h1>{siteConfig.title}</h1>
-            <p>{siteConfig.tagline}</p>
+      <div className={`container ${styles.container}`}>
+        {/* <div className={styles.container}> */}
+        <div className={styles.heroLeft}>
+          <h1>{siteConfig.title}</h1>
+          <p>{siteConfig.tagline}</p>
 
-            <div className={styles.buttons}>
-              <Link className={`button ${styles.btnAction} button--lg`} to="/docs/intro">
-                Get Started
-              </Link>
-            </div>
-          </div>
-          <div className={styles.heroRight}>
-            <img
-              src={inputTypescript}
-              style={{ maxHeight: 320, marginRight: -50, marginLeft: -50 }}
-            />
-            <img src={outputGraphql} style={{ maxHeight: 344, marginTop: -12 }} />
+          <div className={styles.buttons}>
+            <Link className={`button ${styles.btnAction} button--lg`} to="/docs/intro">
+              Get Started
+            </Link>
           </div>
         </div>
+        <div className={styles.heroRight}>
+          <img
+            src={inputTypescript}
+            style={{ maxHeight: 320, marginRight: -50, marginLeft: -50 }}
+          />
+          <img src={outputGraphql} style={{ maxHeight: 344, marginTop: -12 }} />
+        </div>
+        {/* </div> */}
       </div>
     </header>
   )
