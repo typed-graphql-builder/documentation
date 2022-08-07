@@ -86,7 +86,7 @@ query ($continentCode: String) {
 }
 ```
 
-These queries can now be used in a component. For example, using Apollo's `useQuery`, we would get:
+These queries can now be used in a component. For example, if using Apollo's `useQuery`, we would write the following:
 
 ```typescript
 const CountryListComponent = () => {
