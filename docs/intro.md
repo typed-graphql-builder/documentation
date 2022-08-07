@@ -2,46 +2,98 @@
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+# Getting started
 
-Let's discover **Docusaurus in less than 5 minutes**.
+> Note: This tutorial assumes you already have a graphql schema and client in place. If you'd like to create a new app, [please see this guide](sample-app.md)
 
-## Getting Started
-
-Get started by **creating a new site**.
-
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
-
-### What you'll need
-
-- [Node.js](https://nodejs.org/en/download/) version 16.14 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
-
-## Generate a new site
-
-Generate a new Docusaurus site using the **classic template**.
-
-The classic template will automatically be added to your project after you run the command:
+The easiest way to try `typed-graphql-builder` is to use `npx`. Lets generate a TypeScript API
+from the example countries schema schema:
 
 ```bash
-npm init docusaurus@latest my-website classic
+npx typed-graphql-builder \
+  --schema https://raw.githubusercontent.com/typed-graphql-builder/typed-graphql-builder/main/examples/countries-schema.graphql \
+  --output generated-api.ts
 ```
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
+> Note: You can pass a path to a local schema file or an URL
 
-The command also installs all necessary dependencies you need to run Docusaurus.
+The generated API depends on two small dependencies, so you should add them to `package.json`
 
-## Start your site
-
-Run the development server:
-
-```bash
-cd my-website
-npm run start
+```json
+"dependencies": {
+  "@graphql-typed-document-node/core": "^3.1.1",
+  "graphql-tag": "^2.12.6",
+}
 ```
 
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
+Now you can use the query builder in your app by importing `./generated-api.s`. Lets write a sample query:
 
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
+```typescript
+import { $, query } from "./generated-api"
 
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+const continentQuery = query(q => [q.continents({}, c => [c.name, c.code])])
+```
+
+This will generate a GraphQL query with the type:
+
+```typescript
+TypedDocumentNode<{continents: Array<{name: string, country: string}>}, {}>
+```
+
+that corresponds to the following GraphQL query:
+
+```graphql
+query {
+  continents {
+    name
+    code
+  }
+}
+```
+
+Now if we wanted to add a query that takes the continent code as input and returns a list of
+countries on that continent, we can do the following:
+
+```typescript
+import { $, query } from "../countries-schema"
+
+const countryQuery = query(q => [
+  q.countries({ filter: { continent: { eq: $("continentCode") } } }, c => [
+    c.code,
+    c.capital,
+    c.name,
+    c.languages(l => [l.name]),
+  ]),
+])
+```
+
+This will generate a typed document node that includes input variables
+
+```typescript
+TypedDocumentNode<{
+  countries: Array<{
+    code: string,
+    name: string,
+    capital: string,
+    languages: Array<{name: string}>
+  }>}, {
+    continentCode: string
+  }>
+```
+
+These queries can now be used in a component. For example, using Apollo's `useQuery`, we would get:
+
+```typescript
+const CountryListComponent = () => {
+  const continents = useQuery(continentQuery)
+  const [continent, setContinent] = useState("EU")
+
+  const countryList = useQuery(countryQuery, {
+    variables: {
+      continent,
+    },
+  })
+
+  // render the country list here
+}
+```

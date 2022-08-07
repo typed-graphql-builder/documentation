@@ -1,53 +1,45 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require('prism-react-renderer/themes/github')
-const darkCodeTheme = require('prism-react-renderer/themes/dracula')
+const lightCodeTheme = require("prism-react-renderer/themes/github")
+const darkCodeTheme = require("prism-react-renderer/themes/dracula")
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'typed-graphql-builder',
-  tagline: 'A fully type-safe TypeScript GraphQL query builder',
-  url: 'https://typed-graphql-builder.spion.dev ',
-  baseUrl: '/',
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.ico',
+  title: "typed-graphql-builder",
+  tagline: "A fully type-safe TypeScript GraphQL query builder",
+  url: "https://typed-graphql-builder.spion.dev ",
+  baseUrl: "/",
+  onBrokenLinks: "throw",
+  onBrokenMarkdownLinks: "warn",
+  favicon: "img/favicon.ico",
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'typed-graphql-builder', // Usually your GitHub org/user name.
-  projectName: 'documentation', // Usually your repo name.
+  organizationName: "typed-graphql-builder", // Usually your GitHub org/user name.
+  projectName: "documentation", // Usually your repo name.
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
   // to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: "en",
+    locales: ["en"],
   },
 
   presets: [
     [
-      'classic',
+      "classic",
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
+          sidebarPath: require.resolve("./sidebars.js"),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/typed-graphql-builder/documentation/tree/main/docs/',
-        },
-        blog: {
-          showReadingTime: false,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/typed-graphql-builder/documentation/tree/main/blog/',
+          editUrl: "https://github.com/typed-graphql-builder/documentation/tree/main/docs/",
         },
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: require.resolve("./src/css/custom.css"),
         },
       }),
     ],
@@ -57,65 +49,60 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'typed-graphql-builder',
+        title: "typed-graphql-builder",
         logo: {
-          alt: 'typed-graphql-builder',
-          src: 'img/logo.svg',
+          alt: "typed-graphql-builder",
+          src: "img/logo.svg",
         },
         items: [
           {
-            type: 'doc',
-            docId: 'intro',
-            position: 'left',
-            label: 'Tutorial',
+            type: "doc",
+            docId: "intro",
+            position: "left",
+            label: "Tutorial",
           },
-          { to: '/blog', label: 'Blog', position: 'left' },
           {
-            href: 'https://github.com/typed-graphql-builder/typed-graphql-builder',
-            label: 'GitHub',
-            position: 'right',
+            href: "https://github.com/typed-graphql-builder/typed-graphql-builder",
+            label: "GitHub",
+            position: "right",
           },
         ],
       },
       footer: {
-        style: 'dark',
+        style: "dark",
         links: [
           {
-            title: 'Docs',
+            title: "Docs",
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
+                label: "Tutorial",
+                to: "/docs/intro",
               },
             ],
           },
           {
-            title: 'Community',
+            title: "Community",
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/typed-graphql-builder',
+                label: "Stack Overflow",
+                href: "https://stackoverflow.com/questions/tagged/typed-graphql-builder",
               },
               {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/typed-graphql-builder',
+                label: "Discord",
+                href: "https://discordapp.com/invite/typed-graphql-builder",
               },
               {
-                label: 'Twitter',
-                href: 'https://twitter.com/spion',
+                label: "Twitter",
+                href: "https://twitter.com/spion",
               },
             ],
           },
           {
-            title: 'More',
+            title: "More",
             items: [
               {
-                label: 'Blog',
-                to: '/blog',
-              },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/typed-graphql-builder/typed-graphql-builder',
+                label: "GitHub",
+                href: "https://github.com/typed-graphql-builder/typed-graphql-builder",
               },
             ],
           },
