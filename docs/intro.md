@@ -17,7 +17,9 @@ npx typed-graphql-builder \
 
 > Note: You can pass a path to a local schema file or an URL
 
-The generated API depends on two small dependencies, so you should add them to `package.json`
+The above command will take the schema and generate a file `generated-api.ts`. You can use this generated API to build type-safe queries against the specified schema.
+
+The API depends on two small dependencies, so you should add them to `package.json`
 
 ```json
 "dependencies": {
@@ -26,21 +28,23 @@ The generated API depends on two small dependencies, so you should add them to `
 }
 ```
 
-Now you can use the query builder in your app by importing `./generated-api.s`. Lets write a sample query:
+Now you can use the query builder in your app by importing `./generated-api.ts`.
+
+Lets write a sample query:
 
 ```typescript
-import { $, query } from "./generated-api"
+import { query } from "./generated-api"
 
-const continentQuery = query(q => [q.continents({}, c => [c.name, c.code])])
+const continentQuery = query(q => [
+  q.continents({}, c => [
+    //
+    c.name,
+    c.code,
+  ]),
+])
 ```
 
-This will generate a GraphQL query with the type:
-
-```typescript
-TypedDocumentNode<{continents: Array<{name: string, country: string}>}, {}>
-```
-
-that corresponds to the following GraphQL query:
+This will generate a query of type `TypedDocumentNode<{continents: Array<{name: string, country: string}>}, {}>` which corresponds to the following GraphQL query:
 
 ```graphql
 query {
@@ -67,18 +71,19 @@ const countryQuery = query(q => [
 ])
 ```
 
-This will generate a typed document node that includes input variables
+This will generate `TypedDocumentNode<{ countries: Array<{...}>}, { continentCode: string }>`, a typed document node that includes the input variable `continentCode`
 
-```typescript
-TypedDocumentNode<{
-  countries: Array<{
-    code: string,
-    name: string,
-    capital: string,
-    languages: Array<{name: string}>
-  }>}, {
-    continentCode: string
-  }>
+```graphql
+query ($continentCode: String) {
+  countries(filter: { continent: { eq: $continentCode } }) {
+    code
+    capital
+    name
+    languages {
+      name
+    }
+  }
+}
 ```
 
 These queries can now be used in a component. For example, using Apollo's `useQuery`, we would get:
