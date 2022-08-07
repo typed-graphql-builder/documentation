@@ -1,4 +1,5 @@
 label: "Query Syntax"
+position: 3
 collapsed: false # keep the category open by default
 link:
   type: generated-index
