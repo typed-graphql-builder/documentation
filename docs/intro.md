@@ -6,6 +6,8 @@ sidebar_position: 1
 
 > Note: This tutorial assumes you already have a graphql schema and client in place. If you'd like to create a new app, [please see this guide](sample-app.md)
 
+## Generating the API
+
 The easiest way to try `typed-graphql-builder` is to use `npx`. Lets generate a TypeScript API
 from the example countries schema schema:
 
@@ -29,6 +31,8 @@ The API depends on two small dependencies, so you should add them to `package.js
 ```
 
 Now you can use the query builder in your app by importing `./generated-api.ts`.
+
+## Writing queries
 
 Lets write a sample query:
 
@@ -86,7 +90,9 @@ query ($continentCode: String) {
 }
 ```
 
-These queries can now be used in a component. For example, if using Apollo's `useQuery`, we would write the following:
+## Using queries
+
+The queries written above can be used in a component. For example, if using Apollo's `useQuery`, we would write the following:
 
 ```typescript
 const CountryListComponent = () => {
@@ -102,3 +108,5 @@ const CountryListComponent = () => {
   // render the country list here
 }
 ```
+
+That's it! Feel free to explore the generated API further
