@@ -71,7 +71,7 @@ list of countries on that continent, we can use the `$` helper from the generate
 the variable name. The type will be inferred automatically for us:
 
 ```typescript
-import { $, query } from "../countries-schema"
+import { $, query } from "./generated-api"
 
 const countryQuery = query(q => [
   q.countries({ filter: { continent: { eq: $("continentCode") } } }, c => [
@@ -120,4 +120,4 @@ const CountryListComponent = () => {
 }
 ```
 
-That's it! Feel free to explore the generated API further
+That's it! Feel free to explore the generated API further.
