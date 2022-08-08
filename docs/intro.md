@@ -75,7 +75,9 @@ const countryQuery = query(q => [
 ])
 ```
 
-This will generate `TypedDocumentNode<{ countries: Array<{...}>}, { continentCode: string }>`, a typed document node that includes the input variable `continentCode`
+This will generate `TypedDocumentNode<{ countries: Array<{...}>}, { continentCode: string }>`, a typed document node that includes the input variable `continentCode`.
+
+The GraphQL version of the above query is shown below:
 
 ```graphql
 query ($continentCode: String) {
