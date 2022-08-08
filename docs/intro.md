@@ -9,7 +9,7 @@ sidebar_position: 1
 ## Generating the API
 
 The easiest way to try `typed-graphql-builder` is to use `npx`. Lets generate a TypeScript API
-from the example countries schema schema:
+from the example countries schema:
 
 ```bash
 npx typed-graphql-builder \
