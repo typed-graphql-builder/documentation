@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocs=self.webpackChunkdocs||[]).push([[727],{5235:e=>{e.exports=JSON.parse('{"title":"Usage with clients","slug":"/category/clients","permalink":"/docs/category/clients","navigation":{"previous":{"title":"Getting started","permalink":"/docs/intro"},"next":{"title":"apollo","permalink":"/docs/clients/apollo"}}}')}}]);
