@@ -31,6 +31,6 @@ The estimate is based on the Hasura generated schema of a large database include
 
 > note: generated with `tql` v1.0.0-rc.10 and `typed-graphql-builder` v1.3.1
 
-[tql]: tql.dev
+[tql]: https://tql.dev
 [zeus]: https://zeus.graphqleditor.com/
 [initial]: https://github.com/hfour/gql-builder/blob/22a077aea0db71962ffcc2266e131fe159e14e57/src/builder-3.ts
