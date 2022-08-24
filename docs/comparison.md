@@ -3,20 +3,21 @@ title: Comparison with other clients
 sidebar_position: 10
 ---
 
-This page compares `typed-graphql-builder` with [Zeus] and [tql], as those were the two libraries that
-served as the inspiration for this one.
+This page compares `typed-graphql-builder` with [Zeus] and [tql], as those were the two libraries that served as the primary inspiration.
 
 `typed-grapql-builder` owes much of its API design to [tql]. Although our
-[initial design sketches][initial] predate it, `tql` is still the principal source of
-`typed-graphql-builder`'s API, especially variables, aliases and selections, with only a few minor
+[initial design sketches][initial] predate it, `tql` is still the principal inspiration for
+`typed-graphql-builder`'s API, especially variables, aliases and selections, with only a few
 differences:
 
 1. scalar fields can be selected without method calls i.e. `[t.id, t.name]` instead of `[t.id(), t.name()]`
 2. the union selection method is called `$on` instead of `on` to more easily avoid conflict with
    existing field names
+3. fragments are supported via the `fragment` function
 
-In terms of capabilities, there is one notable difference - `typed-graphql-builer` can infer a
-variable placed anywhere in an input type.
+In terms of capabilities, there is one notable difference
+
+1. `typed-graphql-builer` can infer a variable placed anywhere in an input type.
 
 The generated code is where most of the differences come from. Here, we took inspiration from the
 way `graphql-zeus` provides a compact map of all input types. In this way, we reduce the generated
