@@ -26,7 +26,7 @@ You should add them to your project's `package.json`
 
 ```json
 "dependencies": {
-  "@graphql-typed-document-node/core": "^3.x1.1",
+  "@graphql-typed-document-node/core": "^3.1.1",
   "graphql-tag": "^2.12.6",
 }
 ```
