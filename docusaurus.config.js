@@ -89,7 +89,7 @@ const config = {
               },
               {
                 label: "Discord",
-                href: "https://discordapp.com/invite/typed-graphql-builder",
+                href: "https://discord.gg/f9bZ4UnDJj",
               },
               {
                 label: "Twitter",
