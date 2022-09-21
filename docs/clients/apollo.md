@@ -2,6 +2,8 @@
 title: Apollo
 ---
 
+> [Apollo Client](https://www.apollographql.com/docs/react/) is a comprehensive state management library for JavaScript that enables you to manage both local and remote data with GraphQL. Use it to fetch, cache, and modify application data, all while automatically updating your UI.
+
 `typed-graphql-builder` can easily be used with Apollo Client by substituting the `gql` function
 that comes with it. Instead of using `gql` and passing it a query string:
 
