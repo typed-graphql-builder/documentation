@@ -1,6 +1,6 @@
 ---
 title: Comparison with other clients
-sidebar_position: 10
+sidebar_position: 40
 ---
 
 This page compares `typed-graphql-builder` with [Zeus] and [tql], as those were the two libraries that served as the primary inspiration.

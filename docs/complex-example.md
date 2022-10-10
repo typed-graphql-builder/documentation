@@ -1,5 +1,6 @@
 ---
 title: Complex example
+sidebar_position: 60
 ---
 
 This example is based on a large example schema generated from a Hasura instance with many tables.
