@@ -68,11 +68,11 @@ Or you could specify some built-in scalars then map any remaining custom ones to
 --scalar uuid=string --scalar timestamp=string --scalar timestamptz=string --scalar jsonb=unknown --scalar '(.+)=./scalars#$1'
 ```
 
-will map all standard Hasura scalars to sensible types, then map any other scalars to imports
-from `'./scalars'`. For example if you have a scalar `MyScalar`, the above will add the following import:
+will map some standard Hasura scalars to sensible types, then map any other scalars to imports
+from `'./scalars'`. If you have a scalar `MyScalar`, the above will add the following import:
 
 ```typescript
 import type { MyScalar } from "./scalars"
 ```
 
-Despite that, Hasura's `timestamp` scalar will still map to a string.
+while at the same time, Hasura's `timestamp` scalar will still map to a string.
