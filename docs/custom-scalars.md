@@ -65,7 +65,7 @@ The order of patterns is important. You can specify a catch-all pattern at the e
 Or you could specify some built-in scalars then map any remaining custom ones to a file. For example:
 
 ```
---scalar uuid=string --scalar timestamp=string --scalar timestamptz=string --scalar jsonb=unknown --scalar '(.+)=./scalars#$1'
+--scalar uuid=string --scalar timestamp=string --scalar jsonb=unknown --scalar '(.+)=./scalars#$1'
 ```
 
 will map some standard Hasura scalars to sensible types, then map any other scalars to imports
