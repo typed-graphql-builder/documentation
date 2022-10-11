@@ -18,6 +18,7 @@ differences:
 In terms of capabilities, there is one notable difference
 
 1. `typed-graphql-builer` can infer a variable placed anywhere in an input type.
+2. `typed-graphql-builder` supports [custom mapping for scalars](/docs/custom-scalars)
 
 The generated code is where most of the differences come from. Here, we took inspiration from the
 way `graphql-zeus` provides a compact map of all input types. In this way, we reduce the generated
