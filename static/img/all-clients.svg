@@ -6,7 +6,7 @@
    version="1.1"
    id="svg52"
    sodipodi:docname="all-clients.svg"
-   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   inkscape:version="1.3.2 (091e20ef0f, 2023-11-25, custom)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -21,15 +21,17 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      showgrid="false"
-     inkscape:zoom="1.9352548"
-     inkscape:cx="361.45112"
-     inkscape:cy="237.95316"
-     inkscape:window-width="1916"
-     inkscape:window-height="1038"
+     inkscape:zoom="1.396525"
+     inkscape:cx="204.79404"
+     inkscape:cy="324.01854"
+     inkscape:window-width="1920"
+     inkscape:window-height="1039"
      inkscape:window-x="0"
-     inkscape:window-y="18"
-     inkscape:window-maximized="1"
-     inkscape:current-layer="svg52" />
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg52"
+     inkscape:showpageshadow="0"
+     inkscape:deskcolor="#505050" />
   <defs
      id="defs5">
     <path
@@ -187,22 +189,19 @@
      id="path8244-5" />
   <g
      id="g11469"
-     transform="translate(-15.876525,-83.023576)">
-    <path
-       style="fill:#f66d05;fill-opacity:1;stroke-width:0.227633"
-       d="m 320.76089,541.7039 c -2.97169,-0.74775 -6.14308,-3.42554 -7.33734,-6.19536 l -0.6625,-1.53653 -26.29792,-0.002 c -28.99806,-0.003 -27.29985,0.0786 -30.39532,-1.46042 -7.38475,-3.67161 -10.2037,-12.58405 -6.32677,-20.00282 1.58437,-3.03181 4.99939,-5.86581 8.48928,-7.04495 1.45322,-0.49099 1.76801,-0.50216 17.6416,-0.62553 18.0268,-0.1401 17.07633,-0.0532 19.32981,-1.76722 2.33103,-1.77299 3.44952,-4.28579 3.27208,-7.351 -0.18253,-3.15322 -1.94892,-5.71367 -4.90914,-7.11597 l -1.53078,-0.72517 -25.74205,-0.0616 -25.74205,-0.0616 -0.26239,0.8758 c -0.38836,1.29621 -1.8569,3.44342 -3.10861,4.54522 -3.35974,2.95736 -8.01551,3.5568 -12.0683,1.5538 -5.93643,-2.93395 -7.87896,-10.40285 -4.13473,-15.89779 1.87969,-2.75858 4.85787,-4.44445 8.24044,-4.66468 3.46891,-0.22587 5.92744,0.71423 8.42519,3.22162 1.09847,1.1027 1.78127,2.02138 2.16252,2.90956 l 0.55719,1.29803 26.06403,0.0734 c 28.86057,0.0813 26.95529,-0.018 30.1061,1.57018 8.59074,4.33026 10.80759,15.34756 4.56369,22.68067 -1.16274,1.36558 -3.36707,3.01355 -4.99289,3.73273 -2.74631,1.21482 -2.24372,1.18097 -19.54722,1.31657 l -16.16197,0.12665 -1.25198,0.59414 c -1.85696,0.88124 -3.27841,2.26041 -4.14595,4.02264 -0.69495,1.41164 -0.74817,1.68205 -0.74813,3.80088 4e-5,2.01885 0.0709,2.42512 0.61583,3.53357 0.7248,1.4742 2.06813,2.93927 3.42286,3.73302 2.23651,1.31042 1.42225,1.27485 29.07285,1.26994 l 25.3902,-0.005 0.77171,-1.64189 c 2.60433,-5.54112 9.18317,-7.81669 14.70656,-5.08688 5.9364,2.93394 7.87894,10.40286 4.13471,15.89779 -1.14887,1.68606 -3.22301,3.33757 -5.08442,4.04842 -1.49831,0.57219 -5.04313,0.81259 -6.51619,0.44194 z"
-       id="path8398" />
+     transform="matrix(1.1738265,0,0,1.1738265,-55.907925,-168.17328)"
+     style="fill:#d45500">
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:64.7589px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#f66d05;fill-opacity:1;stroke:none;stroke-width:1.61897"
-       x="346.16382"
-       y="525.87311"
-       id="text11036"><tspan
+       style="font-style:normal;font-weight:normal;font-size:34.1496px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#d45500;fill-opacity:1;stroke:none;stroke-width:0.85374"
+       x="228.72771"
+       y="513.59827"
+       id="text1"><tspan
          sodipodi:role="line"
-         id="tspan11034"
-         x="346.16382"
-         y="525.87311"
-         style="stroke-width:1.61897">Relay</tspan></text>
+         id="tspan1"
+         x="228.72771"
+         y="513.59827"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas;stroke-width:0.85374;fill:#d45500">graphql-request</tspan></text>
   </g>
   <path
      style="fill:#008000;stroke-width:0.374919"

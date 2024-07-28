@@ -1,10 +1,12 @@
 ---
-title: Fields
+title: All Fields
 ---
+
+To make the field syntax easier to use, you can use a helper
 
 # `all`
 
-When selecting fields, you can use the `all` helper:
+Here is an example:
 
 ```typescript
 let compareCountriesQuery = query(q => [
@@ -12,6 +14,6 @@ let compareCountriesQuery = query(q => [
 ])
 ```
 
-This will select all country fields. 
+This will select all country fields.
 
 > Note: `all` will not call any methods that require arguments
