@@ -15,9 +15,9 @@ differences:
    existing field names
 3. fragments are supported via the `fragment` function
 
-In terms of capabilities, there is one notable difference
+In terms of capabilities, there are two notable differences:
 
-1. `typed-graphql-builer` can infer a variable placed anywhere in an input type.
+1. `typed-graphql-builder` can infer a variable placed anywhere in an input type.
 2. `typed-graphql-builder` supports [custom mapping for scalars](/docs/custom-scalars)
 
 The generated code is where most of the differences come from. Here, we took inspiration from the
@@ -25,7 +25,7 @@ way `graphql-zeus` provides a compact map of all input types. In this way, we re
 code size to ~ 25% of what `tql` generates.
 
 The estimate is based on the Hasura generated schema of a large database included in the examples
-(`x.graphql`)
+(`x.graphql`). Below is the size of the generated client for a veru large Hasura schema:
 
 | schema    | tql     | typed-graphql-builder |
 | --------- | ------- | --------------------- |
