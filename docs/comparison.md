@@ -25,7 +25,7 @@ way `graphql-zeus` provides a compact map of all input types. In this way, we re
 code size to ~ 25% of what `tql` generates.
 
 The estimate is based on the Hasura generated schema of a large database included in the examples
-(`x.graphql`). Below is the size of the generated client for a veru large Hasura schema:
+(`x.graphql`). Below is the size of the generated client for a very large Hasura schema:
 
 | schema    | tql     | typed-graphql-builder |
 | --------- | ------- | --------------------- |
